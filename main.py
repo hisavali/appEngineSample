@@ -17,11 +17,11 @@
 import webapp2
 from google.appengine.api import users
 import cgi
-
-from test import valid_month,valid_day,valid_year,escape_html
-
 import jinja2
 import os
+
+from test import valid_month,valid_day,valid_year,escape_html
+from rot13 import ROT13Handler
 
 form="""
 <form>
@@ -134,4 +134,5 @@ class ThanksHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler2),
     #('/', MainHandler1),
-    ('/thanks',ThanksHandler)], debug=True)
+    ('/thanks',ThanksHandler),
+    ('/rot13',ROT13Handler)], debug=True)
