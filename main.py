@@ -124,16 +124,14 @@ class MainHandler2(webapp2.RequestHandler):
 		if not (user_month and user_day and user_year):
 			return self.write_form("There is error",month,day,year)
 		else:
-			return self.response.out.write("That is fine")
+			self.redirect("/thanks")
 		
-
-class Guestbook(webapp2.RequestHandler):
-	def post(self):
-		self.response.out.write('<html><body>You wrote:<prep>')
-		self.response.out.write(cgi.escape(self.request.get('content')))
-		self.response.out.write('</prep></body></html>')
+class ThanksHandler(webapp2.RequestHandler):
+	def get(self):
+		return self.response.out.write("That is fine")
+		
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler2),
     #('/', MainHandler1),
-    ('/sign',Guestbook)], debug=True)
+    ('/thanks',ThanksHandler)], debug=True)
