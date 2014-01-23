@@ -1,3 +1,5 @@
+ 
+import cgi
 
 months = ['January',
           'February',
@@ -27,7 +29,7 @@ def valid_day(day):
         ret = int(day)
         if ret in range(1,31):
           return ret
-  except Exception.ValueError:
+  except ValueError:
     return None
 
 
@@ -36,3 +38,20 @@ def valid_year(year):
     ret = int (year)
     if ret in range(1900,2014):
       return ret
+
+
+# def escape_html(s):
+#     if s == '<':
+#         return "&lt;"
+    
+#     if s == '>':
+#         return "&gt;"
+    
+#     if s == '"':
+#         return "&quote;"
+    
+#     if s == '&':
+#         return "&amp;"
+
+def escape_html(s):
+  return cgi.escape(s, quote=True)

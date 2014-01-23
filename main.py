@@ -18,6 +18,8 @@ import webapp2
 from google.appengine.api import users
 import cgi
 
+from test import valid_month,valid_day,valid_year,escape_html
+
 import jinja2
 import os
 
@@ -59,20 +61,22 @@ Your birthday?
 </br>
 <label>
 Month
-<input type="text" name="month">
+<input type="text" name="month" value="%(month)s">
 </label>
 
 <label>
 Day
-<input type="text" name="day">
+<input type="text" name="day" value="%(day)s">
 </label>
 
 <label>
 Year
-<input type="text" name="year">
+<input type="text" name="year" value="%(year)s">
 </label>
 
 </br>
+
+<div style="color:red">%(error)s</div>
 
 <input type="submit">
 </form>
@@ -98,11 +102,29 @@ class MainHandler1(webapp2.RequestHandler):
 
 class MainHandler2(webapp2.RequestHandler):
 	"""docstring for MainHandler2"""
+	def write_form(self,error="",month="",day="",year=""):
+		self.response.out.write(form2 % {"error":error,
+										  "month":escape_html(month),
+										   "day":escape_html(day),
+										   "year":escape_html(year)})
+
 	def get(self):
-		self.response.out.write(form2)
+		self.write_form("")
 
 	def post(self):
-		self.response.out.write("That is fine")
+		
+		month = self.request.get('month')
+		day = self.request.get('day')
+		year = self.request.get('year')
+
+		user_month = valid_month(month)
+		user_day = valid_day(day)
+		user_year = valid_year(year)
+
+		if not (user_month and user_day and user_year):
+			return self.write_form("There is error",month,day,year)
+		else:
+			return self.response.out.write("That is fine")
 		
 
 class Guestbook(webapp2.RequestHandler):
