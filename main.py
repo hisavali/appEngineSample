@@ -21,6 +21,7 @@ import jinja2
 import os
 
 from test import valid_month, valid_day, valid_year, escape_html
+from base import BaseHandler
 from rot13 import ROT13Handler
 from login import LoginHandler
 from welcome import WelcomeHandler
@@ -82,14 +83,9 @@ Year
 <input type="submit">
 </form>
 """
-jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
-
-
-class MainHandler(webapp2.RequestHandler):
+class MainHandler(BaseHandler):
     def get(self):
-        template = jinja_environment.get_template('index.html')
-        self.response.out.write(template.render())
-
+        return self.render("index.html")
 
 class MainHandler1(webapp2.RequestHandler):
     def get(self):
@@ -137,7 +133,7 @@ class ThanksHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-                                  ('/', MainHandler2),
+                                  ('/', MainHandler),
                                   #('/', MainHandler1),
                                   ('/thanks', ThanksHandler),
                                   ('/rot13', ROT13Handler),
