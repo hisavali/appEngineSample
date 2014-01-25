@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cffedcde-c567-4df9-8e1b-ffd78f15eeec" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\project\appEngine\hiteshsavaliya\home.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\appEngine\hiteshsavaliya\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\appEngine\hiteshsavaliya\login.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\appEngine\hiteshsavaliya\rot13.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\appEngine\hiteshsavaliya\welcome.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base.py" afterPath="$PROJECT_DIR$/base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.py" afterPath="$PROJECT_DIR$/login.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hiteshsavaliya.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,21 +31,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="14" column="40" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
               <folding>
-                <marker date="1390639184864" expanded="true" signature="0:67" placeholder="import ..." />
-                <marker date="1390639184864" expanded="true" signature="101:1236" placeholder="..." />
-                <marker date="1390639184864" expanded="true" signature="120:272" placeholder="..." />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="login.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="56" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="969">
+            <state line="18" column="55" selection-start="509" selection-end="509" vertical-scroll-proportion="0.2918455" vertical-offset="170" max-vertical-offset="969">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="83" selection-start="457" selection-end="468" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="391">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="39" selection-start="3328" selection-end="3328" vertical-scroll-proportion="0.9270386" vertical-offset="1914" max-vertical-offset="2482">
+            <state line="2" column="1" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="1669" max-vertical-offset="2482">
               <folding>
                 <element signature="e#601#615#0" expanded="true" />
               </folding>
@@ -107,10 +109,10 @@
         <option value="$PROJECT_DIR$/r.py" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/welcome.py" />
-        <option value="$PROJECT_DIR$/login.py" />
         <option value="$PROJECT_DIR$/welcome.html" />
         <option value="$PROJECT_DIR$/base.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/login.py" />
       </list>
     </option>
   </component>
@@ -161,6 +163,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hiteshsavaliya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hiteshsavaliya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hiteshsavaliya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,17 +411,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rot13.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="40" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <folding>
-            <marker date="1390639184864" expanded="true" signature="0:67" placeholder="import ..." />
-            <marker date="1390639184864" expanded="true" signature="101:1236" placeholder="..." />
-            <marker date="1390639184864" expanded="true" signature="120:272" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/r.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="12" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
@@ -422,15 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="56" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="969">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
@@ -440,9 +436,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="39" selection-start="3328" selection-end="3328" vertical-scroll-proportion="0.9270386" vertical-offset="1914" max-vertical-offset="2482">
+        <state line="2" column="1" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="1669" max-vertical-offset="2482">
           <folding>
             <element signature="e#601#615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rot13.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="40" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="83" selection-start="457" selection-end="468" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="55" selection-start="509" selection-end="509" vertical-scroll-proportion="0.2918455" vertical-offset="170" max-vertical-offset="969">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
