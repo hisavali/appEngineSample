@@ -28,18 +28,20 @@ class ROT13Handler(webapp2.RequestHandler):
 	def write_textForm(self,text_value=""):
 		return self.response.out.write(rot_form % {"new_text":escape_html(text_value)})
 
-
-def rot13(client_str):
+	def rot13(self,client_str):
 		if client_str:
 			output=[]
 			for c in client_str:
+				print 'Processing character %s' %c
 				if c.isalpha():
-					if ord(c) in range(ord('a'),ord('m')) or range(ord('A'),ord('M')):
+					if ord(c) in range(ord('a'),ord('m')+1):
 						c = chr(ord(c) + 13)
-					elif ord(c) in range(ord('n'),ord('z')) or range(ord('N'),ord('Z')):
+					elif ord(c) in range(ord('A'),ord('M')+1):
+						c = chr(ord(c) + 13)
+					elif ord(c) in range(ord('n'),ord('z')+1):
 						c = chr(ord(c) - 13)
+					elif ord(c) in range(ord('N'),ord('Z')+1):
+						c = chr(ord(c) - 13)
+				
 				output.append(c)
-		return str(output)
-
-# print rot13("zzzz")
-
+		return ''.join(output)
