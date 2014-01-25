@@ -20,10 +20,12 @@ import cgi
 import jinja2
 import os
 
-from test import valid_month,valid_day,valid_year,escape_html
+from test import valid_month, valid_day, valid_year, escape_html
 from rot13 import ROT13Handler
+from login import LoginHandler
+from welcome import WelcomeHandler
 
-form="""
+form = """
 <form>
 <select name="q">
 <option value="1">There is only One</option>
@@ -35,7 +37,7 @@ form="""
 </form>
 """
 
-form1="""
+form1 = """
 <form>
 <label> 
 One
@@ -53,8 +55,7 @@ Three
 <input type="submit">
 """
 
-
-form2="""
+form2 = """
 <form method="post">
 Your birthday?
 </br>
@@ -83,56 +84,62 @@ Year
 """
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
+
 class MainHandler(webapp2.RequestHandler):
-	def get(self):
-		template = jinja_environment.get_template('index.html')
-		self.response.out.write(template.render())
+    def get(self):
+        template = jinja_environment.get_template('index.html')
+        self.response.out.write(template.render())
+
 
 class MainHandler1(webapp2.RequestHandler):
     def get(self):
 
-#    	user = users.get_current_user()
+    #    	user = users.get_current_user()
 
-#    	if user:
-#    		self.response.write('Hello,' + user.nickname())
-#    	else:
-#    		self.redirect(users.create_login_url(self.request.uri))
-		self.response.out.write(form)
+    #    	if user:
+    #    		self.response.write('Hello,' + user.nickname())
+    #    	else:
+    #    		self.redirect(users.create_login_url(self.request.uri))
+        self.response.out.write(form)
 
 
 class MainHandler2(webapp2.RequestHandler):
-	"""docstring for MainHandler2"""
-	def write_form(self,error="",month="",day="",year=""):
-		self.response.out.write(form2 % {"error":error,
-										  "month":escape_html(month),
-										   "day":escape_html(day),
-										   "year":escape_html(year)})
+    """docstring for MainHandler2"""
 
-	def get(self):
-		self.write_form("")
+    def write_form(self, error="", month="", day="", year=""):
+        self.response.out.write(form2 % {"error": error,
+                                         "month": escape_html(month),
+                                         "day": escape_html(day),
+                                         "year": escape_html(year)})
 
-	def post(self):
-		
-		month = self.request.get('month')
-		day = self.request.get('day')
-		year = self.request.get('year')
+    def get(self):
+        self.write_form("")
 
-		user_month = valid_month(month)
-		user_day = valid_day(day)
-		user_year = valid_year(year)
+    def post(self):
 
-		if not (user_month and user_day and user_year):
-			return self.write_form("There is error",month,day,year)
-		else:
-			self.redirect("/thanks")
-		
+        month = self.request.get('month')
+        day = self.request.get('day')
+        year = self.request.get('year')
+
+        user_month = valid_month(month)
+        user_day = valid_day(day)
+        user_year = valid_year(year)
+
+        if not (user_month and user_day and user_year):
+            return self.write_form("There is error", month, day, year)
+        else:
+            self.redirect("/thanks")
+
+
 class ThanksHandler(webapp2.RequestHandler):
-	def get(self):
-		return self.response.out.write("That is fine")
-		
+    def get(self):
+        return self.response.out.write("That is fine")
+
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler2),
-    #('/', MainHandler1),
-    ('/thanks',ThanksHandler),
-    ('/rot13',ROT13Handler)], debug=True)
+                                  ('/', MainHandler2),
+                                  #('/', MainHandler1),
+                                  ('/thanks', ThanksHandler),
+                                  ('/rot13', ROT13Handler),
+                                  ('/login', LoginHandler),
+                                  ('/welcome',WelcomeHandler)], debug=True)

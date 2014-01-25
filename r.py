@@ -17,4 +17,10 @@ def rot13(client_str):
 	return ''.join(output)
 
 
-print rot13("H&^%£$\"\"")
+import os
+
+def fun():
+    print __file__
+    return os.path.abspath(os.path.join(os.path.dirname(__file__),"/templates"))
+
+print fun()
