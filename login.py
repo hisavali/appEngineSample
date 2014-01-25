@@ -37,7 +37,7 @@ class LoginHandler(BaseHandler):
 
             self.render("login.html", **params)
         else:
-            self.redirect("/welcome?username=")
+            self.redirect("/welcome?username="+userName)
 
     def validate_username(self, username):
         USER_RE = re.compile("^[a-zA-Z0-9_-]{3,20}$")
