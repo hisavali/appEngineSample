@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NewBlog</title>
+    <style>
+        h1 {
+        color:blue;
+        margin-left:200px;
+        }
+        .subject {
+        width:500px;
+        margin-left:200px;
+        }
+        .content {
+        width:500px;
+        height:500px;
+        margin-left:200px;
+        }
+        .error{
+        color:red;
+        font-size:20px;
+        margin-left:200px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercise Blog</h1>
+
+<form method="post">
+    <br>
+    <input class="subject" name="subject" style="text" value={{subject}}>
+    <br>
+    <br>
+    <textarea class="content" name="content">{{content}}</textarea>
+    <div class="error">{{error_content}}</div>
+    <br>
+    <input class="subject" type="submit">
+</form>
+</body>
+
+</html>

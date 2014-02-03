@@ -18,13 +18,14 @@ import webapp2
 from google.appengine.api import users
 import cgi
 import jinja2
-import os
 
 from test import valid_month, valid_day, valid_year, escape_html
 from base import BaseHandler
 from rot13 import ROT13Handler
 from login import LoginHandler
 from welcome import WelcomeHandler
+from newblog import NewBlog
+from primalink import PrimaLink
 
 form = """
 <form>
@@ -138,4 +139,6 @@ app = webapp2.WSGIApplication([
                                   ('/thanks', ThanksHandler),
                                   ('/rot13', ROT13Handler),
                                   ('/login', LoginHandler),
-                                  ('/welcome',WelcomeHandler)], debug=True)
+                                  ('/welcome',WelcomeHandler),
+                                  ('/newpost',NewBlog),
+                                  ('/primalink',PrimaLink)], debug=True)
