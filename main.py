@@ -141,4 +141,4 @@ app = webapp2.WSGIApplication([
                                   ('/login', LoginHandler),
                                   ('/welcome',WelcomeHandler),
                                   ('/newpost',NewBlog),
-                                  ('/primalink',PrimaLink)], debug=True)
+                                  (r'/primalink/(\d+)', PrimaLink)], debug=True)
