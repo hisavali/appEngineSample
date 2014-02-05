@@ -29,7 +29,7 @@ class NewBlog(BaseHandler):
             newblog = BlogDB(subject=subject,content=content)
             newblog.put()
 
-            self.redirect('/primalink/' + str(newblog.key().id()))
+            self.redirect('/blog/permalink/' + str(newblog.key().id()))
             pass
 
 

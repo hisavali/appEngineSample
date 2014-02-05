@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cffedcde-c567-4df9-8e1b-ffd78f15eeec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/hiteshsavaliya.iml" afterPath="$PROJECT_DIR$/.idea/hiteshsavaliya.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newblog.py" afterPath="$PROJECT_DIR$/newblog.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/primalink.html" afterPath="$PROJECT_DIR$/templates/primalink.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/primalink.py" afterPath="$PROJECT_DIR$/primalink.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hiteshsavaliya.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +47,7 @@
       <file leaf-file-name="newblog.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newblog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="46" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="697">
+            <state line="31" column="33" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="697">
               <folding>
                 <element signature="e#1#10#0" expanded="true" />
               </folding>
@@ -59,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="primalink.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="primalink.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/primalink.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="42" selection-start="374" selection-end="374" vertical-scroll-proportion="0.38434783" vertical-offset="0" max-vertical-offset="575">
+            <state line="13" column="23" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
               <folding>
                 <element signature="e#1#29#0" expanded="true" />
               </folding>
@@ -115,10 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="75" selection-start="3653" selection-end="3653" vertical-scroll-proportion="0.0" vertical-offset="1729" max-vertical-offset="2346">
+            <state line="143" column="85" selection-start="3668" selection-end="3668" vertical-scroll-proportion="0.8956522" vertical-offset="1729" max-vertical-offset="2346">
               <folding />
             </state>
           </provider>
@@ -154,10 +150,10 @@
         <option value="$PROJECT_DIR$/namedtupleEx1.py" />
         <option value="$PROJECT_DIR$/templates/newblog.html" />
         <option value="$PROJECT_DIR$/templates/primalink.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/newblog.py" />
         <option value="$PROJECT_DIR$/templates/primalink.html" />
         <option value="$PROJECT_DIR$/primalink.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/newblog.py" />
       </list>
     </option>
   </component>
@@ -618,22 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="75" selection-start="3653" selection-end="3653" vertical-scroll-proportion="0.0" vertical-offset="1729" max-vertical-offset="2346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newblog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="46" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="697">
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/primalink.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="4" selection-start="287" selection-end="287" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="544">
@@ -641,12 +621,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/newblog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="33" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="697">
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/primalink.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="42" selection-start="374" selection-end="374" vertical-scroll-proportion="0.38434783" vertical-offset="0" max-vertical-offset="575">
+        <state line="13" column="23" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <folding>
             <element signature="e#1#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="85" selection-start="3668" selection-end="3668" vertical-scroll-proportion="0.8956522" vertical-offset="1729" max-vertical-offset="2346">
+          <folding />
         </state>
       </provider>
     </entry>
