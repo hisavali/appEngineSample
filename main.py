@@ -26,6 +26,7 @@ from login import LoginHandler
 from welcome import WelcomeHandler
 from newblog import NewBlog
 from primalink import PrimaLink
+from blogListHandler import BlogListHandler
 
 form = """
 <form>
@@ -140,5 +141,6 @@ app = webapp2.WSGIApplication([
                                   ('/rot13', ROT13Handler),
                                   ('/login', LoginHandler),
                                   ('/welcome',WelcomeHandler),
+                                  (r'/blog',BlogListHandler),
                                   ('/blog/newpost',NewBlog),
                                   (r'/blog/permalink/(\d+)', PrimaLink)], debug=True)
