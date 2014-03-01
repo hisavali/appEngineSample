@@ -18,4 +18,4 @@ class WelcomeHandler(BaseHandler):
             return self.render("welcome.html", username= un)
         else:
             params = {}
-            self.redirect("/login",**params)
+            self.redirect("/signup",**params)

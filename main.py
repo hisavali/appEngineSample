@@ -140,7 +140,7 @@ app = webapp2.WSGIApplication([
                                   #('/', MainHandler1),
                                   ('/thanks', ThanksHandler),
                                   ('/rot13', ROT13Handler),
-                                  ('/login', LoginHandler),
+                                  ('/signup', LoginHandler),
                                   ('/welcome',WelcomeHandler),
                                   (r'/blog',BlogListHandler),
                                   ('/blog/newpost',NewBlog),
