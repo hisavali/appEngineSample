@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cffedcde-c567-4df9-8e1b-ffd78f15eeec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blogs.html" afterPath="$PROJECT_DIR$/templates/blogs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.py" afterPath="$PROJECT_DIR$/login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/welcome.py" afterPath="$PROJECT_DIR$/welcome.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hiteshsavaliya.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="login.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="12" selection-start="3756" selection-end="3756" vertical-scroll-proportion="0.81914896" vertical-offset="1375" max-vertical-offset="2057">
+            <state line="101" column="0" selection-start="3743" selection-end="3743" vertical-scroll-proportion="-9.230769" vertical-offset="1426" max-vertical-offset="2040">
               <folding />
             </state>
           </provider>
@@ -52,7 +47,7 @@
       <file leaf-file-name="primalink.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/primalink.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="29" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+            <state line="6" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
               <folding>
                 <element signature="e#1#29#0" expanded="true" />
               </folding>
@@ -82,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="welcome.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/welcome.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+            <state line="20" column="28" selection-start="787" selection-end="787" vertical-scroll-proportion="0.84577113" vertical-offset="0" max-vertical-offset="459">
               <folding>
                 <element signature="e#1#29#0" expanded="true" />
               </folding>
@@ -166,8 +161,8 @@
         <option value="$PROJECT_DIR$/newblog.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/welcome.py" />
         <option value="$PROJECT_DIR$/login.py" />
+        <option value="$PROJECT_DIR$/welcome.py" />
       </list>
     </option>
   </component>
@@ -793,21 +788,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/primalink.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <folding>
-            <element signature="e#1#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="0" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0" vertical-offset="1043" max-vertical-offset="1445">
           <folding>
             <marker date="1393670230174" expanded="true" signature="994:1279" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/primalink.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding>
+            <element signature="e#1#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="3743" selection-end="3743" vertical-scroll-proportion="-9.230769" vertical-offset="1426" max-vertical-offset="2040">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -822,17 +824,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/welcome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+        <state line="20" column="28" selection-start="787" selection-end="787" vertical-scroll-proportion="0.84577113" vertical-offset="0" max-vertical-offset="459">
           <folding>
             <element signature="e#1#29#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="12" selection-start="3756" selection-end="3756" vertical-scroll-proportion="0.81914896" vertical-offset="1375" max-vertical-offset="2057">
-          <folding />
         </state>
       </provider>
     </entry>

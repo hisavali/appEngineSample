@@ -16,7 +16,6 @@ def check_hash_val(val):
     if val == make_secure_val(usr):
         return usr
 
-
 class LoginHandler(BaseHandler):
 
     def process_cookie_secure_username(self):
