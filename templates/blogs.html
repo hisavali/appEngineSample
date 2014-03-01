@@ -4,7 +4,7 @@
     <title>All the blogs</title>
 
     <style>
-    .subject
+    #subjectStyle
     {
         margin-left:100px;
         font-size:24px;
@@ -12,7 +12,7 @@
         border-style:groove;
         border-width:medium;
     }
-    .content
+    #contentStyle
     {
         margin-left:100px;
         font-size:12px;
@@ -25,10 +25,15 @@
 
 
 <body>
+    <br>
+    <br>
+
     {% for blog in blogs %}
-        <div id="subject"> {{blog.subject}}</div>
+        <div id="subjectStyle"> {{blog.subject}}</div>
         <br>
-        <div id="content"> {{blog.content}}</div>
+        <div id="contentStyle"> {{blog.content}}</div>
+        <br>
+        <br>
     {% endfor %}
 </body>
 </html>

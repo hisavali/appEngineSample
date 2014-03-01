@@ -55,3 +55,26 @@ def valid_year(year):
 
 def escape_html(s):
   return cgi.escape(s, quote=True)
+
+x = 20
+y = 1
+def variable_scope(x):
+    y = 2
+    print 'x %s' % str(x)
+    print 'y %s' % str(y)
+
+    z = 'a'
+    if z == 'a':
+        print 'z %s' % z
+        z = ''
+        print 'z %s' %z
+        if 1:
+            z = 'c'
+            print 'z %s' %z
+
+        print 'z %s' %z
+
+
+
+# variable_scope(10)
+# print 'y %s' %y

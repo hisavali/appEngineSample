@@ -18,6 +18,7 @@ import webapp2
 from google.appengine.api import users
 import cgi
 import jinja2
+import logging
 
 from test import valid_month, valid_day, valid_year, escape_html
 from base import BaseHandler
@@ -87,17 +88,17 @@ Year
 """
 class MainHandler(BaseHandler):
     def get(self):
+        logging.info('Main Handler Get Method')
         return self.render("index.html")
 
 class MainHandler1(webapp2.RequestHandler):
     def get(self):
+        #    	user = users.get_current_user()
 
-    #    	user = users.get_current_user()
-
-    #    	if user:
-    #    		self.response.write('Hello,' + user.nickname())
-    #    	else:
-    #    		self.redirect(users.create_login_url(self.request.uri))
+        #    	if user:
+        #    		self.response.write('Hello,' + user.nickname())
+        #    	else:
+        #    		self.redirect(users.create_login_url(self.request.uri))
         self.response.out.write(form)
 
 
@@ -144,3 +145,9 @@ app = webapp2.WSGIApplication([
                                   (r'/blog',BlogListHandler),
                                   ('/blog/newpost',NewBlog),
                                   (r'/blog/permalink/(\d+)', PrimaLink)], debug=True)
+
+# def main():
+#     # logging.getLogger().setLevel(logging.DEBUG)
+#     webapp2.util.run_wsgi_app(app)
+#
+# main()
