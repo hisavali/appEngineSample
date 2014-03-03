@@ -18,33 +18,33 @@ def check_hash_val(val):
 
 class LoginHandler(BaseHandler):
 
-    def process_cookie_secure_username(self):
-        self.cookie_username = self.request.cookies.get("user")
-        if self.cookie_username:
-            self.cookie_secure_username_val = make_secure_val(self.cookie_username)
-            cookie_username_val = check_hash_val(self.cookie_username)
-            if cookie_username_val:
-                return cookie_username_val
+    def get_cookie(self,name):
+        self.cookie_val = str(self.request.cookies.get(name))
+        if self.cookie_val:
+            return self.cookie_val
+
+        return None
+
+    def process_get_request_cookie(self):
+        if self.get_cookie("user"):
+            self.cookie_val_username = str(check_hash_val(self.cookie_val))
+            if self.cookie_val_username:
+                return self.cookie_val_username
+
+        return None
 
     def get(self):
         logging.info('LoginHandler get')
         params = {"user_name": ''}
         # self.process_cookie_secure_username()
 
-        cookie_username = self.request.cookies.get("user")
-        cookie_secure_username_val = ''
-        if cookie_username:
-            # logging.info('cookie_username : ' + cookie_username)
-            username_val = str(check_hash_val(cookie_username))
-            # logging.info('username_val : ' + username_val)
-            if username_val:
-                # logging.info('username_val : %s' % username_val)
-                # Pre-populate user name in field
-                params = {"user_name": username_val}
-                cookie_secure_username_val = str(make_secure_val(username_val))
+        if self.process_get_request_cookie():
+            # Pre-populate user name in field
+            params = {"user_name": self.cookie_val_username}
+            self.cookie_val = str(make_secure_val(self.cookie_val_username))
 
         # logging.info('Get setting cookie : ' + cookie_secure_username_val)
-        self.response.headers.add_header("Set-Cookie","user="+cookie_secure_username_val)
+        self.response.headers.add_header("Set-Cookie","user="+self.cookie_val)
         self.render("login.html", **params)
 
     def post(self):
