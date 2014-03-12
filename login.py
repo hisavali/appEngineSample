@@ -19,32 +19,39 @@ def check_hash_val(val):
 class LoginHandler(BaseHandler):
 
     def get_cookie(self,name):
-        self.cookie_val = str(self.request.cookies.get(name))
-        if self.cookie_val:
-            return self.cookie_val
-
+        cookie_val = str(self.request.cookies.get(name))
+        if cookie_val:
+            return cookie_val
         return None
 
-    def process_get_request_cookie(self):
-        if self.get_cookie("user"):
-            self.cookie_val_username = str(check_hash_val(self.cookie_val))
-            if self.cookie_val_username:
-                return self.cookie_val_username
-
+    def get_cookie_user_name(self,name):
+        cookie_val_user_name = self.get_cookie(name)
+        if cookie_val_user_name:
+            return check_hash_val(cookie_val_user_name)
         return None
+
+    def set_cookie(self,name,value):
+        self.response.headers.add_header("Set-Cookie",name+value)
+
+    def user_already_signed_up(self,user_name):
+        cookie_user_name = self.get_cookie_user_name("user")
+        if cookie_user_name == user_name:
+            return True
+
+        return False
 
     def get(self):
         logging.info('LoginHandler get')
         params = {"user_name": ''}
-        # self.process_cookie_secure_username()
 
-        if self.process_get_request_cookie():
+        cookie_user_name = self.get_cookie_user_name("user")
+        cookie_user_name_hashed = ''
+        if cookie_user_name:
             # Pre-populate user name in field
-            params = {"user_name": self.cookie_val_username}
-            self.cookie_val = str(make_secure_val(self.cookie_val_username))
+            params = {"user_name": cookie_user_name}
+            cookie_user_name_hashed = str(make_secure_val(cookie_user_name))
 
-        # logging.info('Get setting cookie : ' + cookie_secure_username_val)
-        self.response.headers.add_header("Set-Cookie","user="+self.cookie_val)
+        self.set_cookie("user=",cookie_user_name_hashed)
         self.render("login.html", **params)
 
     def post(self):
@@ -73,28 +80,16 @@ class LoginHandler(BaseHandler):
             params["email_error"] = "wrong email"
             redirect = False
 
-        cookie_username = self.request.cookies.get("user")
-        logging.debug('cookie_username : %s' % cookie_username)
-
-        cookie_username_val = ''
-        cookie_secure_username_val = ''
-
-        if cookie_username:
-            cookie_username_val = str(check_hash_val(cookie_username))
-            # logging.debug('cookie_username_val : %s' % cookie_username_val)
-        elif username:
-            # User visiting our web page first time.
-            # logging.debug('First time user : %s' % username)
-            cookie_secure_username_val = str(make_secure_val(username))
-
         # # If cookie has same use name,show error
-        if cookie_username_val == username:
+        if self.user_already_signed_up(username):
             logging.error('This is problem : User name is %s' %username)
             params["username_error"] = "User already exists"
             redirect = False
         elif redirect:
-            logging.info('POST setting cookie : ' + cookie_secure_username_val)
-            self.response.headers.add_header("Set-Cookie","user="+cookie_secure_username_val)
+            logging.info('POST User name : %s' %username)
+            cookie_user_name_hash = str(make_secure_val(username))
+            logging.info('POST setting cookie : ' + cookie_user_name_hash)
+            self.set_cookie("user=",cookie_user_name_hash)
 
         if not redirect:
             self.render("login.html", **params)

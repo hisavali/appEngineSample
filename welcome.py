@@ -3,11 +3,15 @@ from base import BaseHandler
 from login import check_hash_val
 import  datetime,calendar
 from email.utils import formatdate
+import logging
 
 class WelcomeHandler(BaseHandler):
     def get(self):
+        logging.info('GET Welcome handler')
         un = ''
         cookie_username = self.request.cookies.get("user")
+        if cookie_username:
+            logging.info('Cookie Value : ' + cookie_username)
         cookie_secure_username_val = ''
         if cookie_username:
             un = str(check_hash_val(cookie_username))
